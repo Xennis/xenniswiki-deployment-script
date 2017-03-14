@@ -1,0 +1,41 @@
+---
+
+###############################################################################
+# Database settings
+###############################################################################
+
+database_host: "database-host"
+database_name: "database-name"
+database_user: "database-user"
+database_password: "database-password"
+
+database_backup_file: "~/backup.sql"
+
+
+###############################################################################
+# Mediawiki basic settings
+###############################################################################
+
+mediawiki_version: "1.28"
+mediawiki_url: "https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.0.tar.gz"
+
+mediawiki_base_dir: "~/public"
+mediawiki_current_dir: "{{ mediawiki_base_dir }}/w"
+mediawiki_new_dir: "{{ mediawiki_base_dir }}/mediawiki-1.28.0"
+
+mediawiki_copy_files:
+  - "LocalSettings.php"
+  - "images/"
+
+
+###############################################################################
+# Mediawiki extensions
+###############################################################################
+
+mediawiki_extensions_wikimedia:
+  - "CategoryTree"
+  - "Math"
+
+mediawiki_extensions_other:
+  - { name: "Gists", repo: "mauroveron/mediawiki-gists" }
+  - { name: "PDFEmbed", repo: "HydraWiki/PDFEmbed" }

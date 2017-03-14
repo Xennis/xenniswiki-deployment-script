@@ -1,0 +1,24 @@
+---
+
+#- name: mediawiki | Install extensions
+#  unarchive:
+#    src: "https://github.com/wikimedia/mediawiki-extensions-{{ item }}/archive/master.tar.gz"
+#    dest: "{{ mediawiki_new_dir }}/extensions/"
+#    creates: "{{ mediawiki_new_dir }}/extensions/{{ item }}"
+#    copy: "no"
+
+- name: mediawiki | Install wikimedia extensions
+  git:
+    repo: "https://github.com/wikimedia/mediawiki-extensions-{{ item }}"
+    dest: "{{ mediawiki_new_dir }}/extensions/{{ item }}"
+  with_items: "{{ mediawiki_extensions_wikimedia }}"
+  when: mediawiki_extensions_wikimedia is defined
+  tags: extensions
+
+- name: mediawiki | Install other extensions
+  git:
+    repo: "https://github.com/{{ item.repo }}"
+    dest: "{{ mediawiki_new_dir }}/extensions/{{ item.name }}"
+  with_items: "{{ mediawiki_extensions_other }}"
+  when: mediawiki_extensions_other is defined
+  tags: extensions

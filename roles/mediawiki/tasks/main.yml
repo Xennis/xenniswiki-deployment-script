@@ -1,0 +1,16 @@
+---
+
+- name: mediawiki | Download and unpack new mediawiki version
+  unarchive:
+    src: "{{ mediawiki_url }}"
+    dest: "{{ mediawiki_base_dir }}"
+    remote_src: True
+    copy: no
+
+- name: mediawiki | Copy local files of current installation
+  command: "cp -r {{ mediawiki_current_dir }}/{{ item }} {{ mediawiki_new_dir }}/{{ item }}"
+  with_items: "{{ mediawiki_copy_files }}"
+  when: mediawiki_copy_files is defined
+
+- include: extensions.yml
+  tags: extensions
