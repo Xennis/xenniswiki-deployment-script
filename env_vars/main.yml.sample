@@ -9,7 +9,7 @@ database_name: "database-name"
 database_user: "database-user"
 database_password: "database-password"
 
-database_backup_file: "~/backup.sql"
+database_backup_file: "~/backup.sql.gz"
 
 
 ###############################################################################
@@ -17,11 +17,12 @@ database_backup_file: "~/backup.sql"
 ###############################################################################
 
 mediawiki_version: "1.28"
-mediawiki_url: "https://releases.wikimedia.org/mediawiki/1.28/mediawiki-1.28.0.tar.gz"
+mediawiki_version_minor: "1.28.1"
+mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version }}/mediawiki-{{ mediawiki_version_minor }}.tar.gz"
 
 mediawiki_base_dir: "~/public"
 mediawiki_current_dir: "{{ mediawiki_base_dir }}/w"
-mediawiki_new_dir: "{{ mediawiki_base_dir }}/mediawiki-1.28.0"
+mediawiki_new_dir: "{{ mediawiki_base_dir }}/mediawiki-{{ mediawiki_version_minor }}"
 
 mediawiki_copy_files:
   - "LocalSettings.php"
@@ -31,6 +32,8 @@ mediawiki_copy_files:
 ###############################################################################
 # Mediawiki extensions
 ###############################################################################
+
+mediawiki_extensions_base_url: "https://github.com"
 
 mediawiki_extensions_wikimedia:
   - "CategoryTree"

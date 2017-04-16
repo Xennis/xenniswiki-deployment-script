@@ -8,7 +8,7 @@
     copy: no
 
 - name: mediawiki | Copy local files of current installation
-  command: "cp -r {{ mediawiki_current_dir }}/{{ item }} {{ mediawiki_new_dir }}/{{ item }}"
+  command: "cp -rp {{ mediawiki_current_dir }}/{{ item }} {{ mediawiki_new_dir }}/"
   with_items: "{{ mediawiki_copy_files }}"
   when: mediawiki_copy_files is defined
 
