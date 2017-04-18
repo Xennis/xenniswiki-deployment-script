@@ -1,6 +1,6 @@
 ---
 
-- name: Backup database into {{ database_backup_file }}
+- name: database | Backup database into {{ database_backup_file }}
   mysql_db:
     login_host: "{{ database_host }}"
     login_user: "{{ database_user }}"

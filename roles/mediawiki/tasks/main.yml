@@ -4,7 +4,7 @@
   unarchive:
     src: "{{ mediawiki_url }}"
     dest: "{{ mediawiki_base_dir }}"
-    remote_src: True
+    mode: "{{ mediawiki_file_mode }}"
     copy: no
 
 - name: mediawiki | Copy local files of current installation
@@ -13,4 +13,7 @@
   when: mediawiki_copy_files is defined
 
 - include: extensions.yml
+  tags: extensions
+
+- include: extensions_syntaxhighlight.yml
   tags: extensions

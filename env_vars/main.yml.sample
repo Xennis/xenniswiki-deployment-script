@@ -16,29 +16,24 @@ database_backup_file: "~/backup.sql.gz"
 # Mediawiki basic settings
 ###############################################################################
 
-mediawiki_version: "1.28"
-mediawiki_version_minor: "1.28.1"
-mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version }}/mediawiki-{{ mediawiki_version_minor }}.tar.gz"
+mediawiki_version_major: "1"
+mediawiki_version_minor: "28"
+mediawiki_version_path: "1"
 
 mediawiki_base_dir: "~/public"
-mediawiki_current_dir: "{{ mediawiki_base_dir }}/w"
-mediawiki_new_dir: "{{ mediawiki_base_dir }}/mediawiki-{{ mediawiki_version_minor }}"
 
 mediawiki_copy_files:
   - "LocalSettings.php"
-  - "images/"
+  - "images"
 
 
 ###############################################################################
 # Mediawiki extensions
 ###############################################################################
 
-mediawiki_extensions_base_url: "https://github.com"
-
 mediawiki_extensions_wikimedia:
   - "CategoryTree"
   - "Math"
 
 mediawiki_extensions_other:
-  - { name: "Gists", repo: "mauroveron/mediawiki-gists" }
-  - { name: "PDFEmbed", repo: "HydraWiki/PDFEmbed" }
+  - { name: "PDFEmbed", repo: "https://github.com/HydraWiki/PDFEmbed" }

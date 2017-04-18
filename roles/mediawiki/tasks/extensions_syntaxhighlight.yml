@@ -1,0 +1,14 @@
+---
+
+- name: syntaxhighlight | Check pygmentize file exists
+  stat:
+    path: "{{ syntaxhighlight_pygmentize_file }}"
+  register: pygmentize_stat
+  tags: extensions
+
+- name: syntaxhighlight | Make pygmentize executable
+  file:
+    path: "{{ syntaxhighlight_pygmentize_file }}"
+    mode: "{{ syntaxhighlight_pygmentize_mode }}"
+  when: pygmentize_stat.stat.exists == True
+  tags: extensions
