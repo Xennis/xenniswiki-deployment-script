@@ -12,6 +12,9 @@
   with_items: "{{ mediawiki_copy_files }}"
   when: mediawiki_copy_files is defined
 
+- include_tasks: skins.yml
+  tags: skins
+
 - include_tasks: extensions.yml
   tags: extensions
 

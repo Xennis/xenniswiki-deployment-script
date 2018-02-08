@@ -3,9 +3,9 @@
 - name: mediawiki | Install wikimedia extensions
   git:
     repo: "{{ mediawiki_extensions_base_url }}/{{ item }}"
-    dest: "{{ mediawiki_new_extensions_dir }}/{{ item }}"
+    dest: "{{ mediawiki_extensions_dir }}/{{ item }}"
     version: "{{ mediawiki_release }}"
-    force: "{{ mediawiki_extensions_force }}"
+    force: "{{ mediawiki_git_force }}"
   with_items: "{{ mediawiki_extensions_wikimedia }}"
   when: mediawiki_extensions_wikimedia is defined
   tags: extensions
@@ -13,15 +13,15 @@
 - name: mediawiki | Install other extensions
   git:
     repo: "{{ item.repo }}"
-    dest: "{{ mediawiki_new_extensions_dir }}/{{ item.name }}"
-    force: "{{ mediawiki_extensions_force }}"
+    dest: "{{ mediawiki_extensions_dir }}/{{ item.name }}"
+    force: "{{ mediawiki_git_force }}"
   with_items: "{{ mediawiki_extensions_other }}"
   when: mediawiki_extensions_other is defined
   tags: extensions
 
 - name: mediawiki | Make extensions directory readable
   file:
-    path: "{{ mediawiki_new_extensions_dir }}"
+    path: "{{ mediawiki_extensions_dir }}"
     mode: "{{ mediawiki_file_mode }}"
     recurse: yes
   tags: extensions

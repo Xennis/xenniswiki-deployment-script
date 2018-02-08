@@ -1,0 +1,18 @@
+---
+
+- name: mediawiki | Install wikimedia skins
+  git:
+    repo: "{{ mediawiki_skins_base_url }}/{{ item }}"
+    dest: "{{ mediawiki_skins_dir }}/{{ item }}"
+    version: "{{ mediawiki_release }}"
+    force: "{{ mediawiki_git_force }}"
+  with_items: "{{ mediawiki_skins_wikimedia }}"
+  when: mediawiki_skins_wikimedia is defined
+  tags: skins
+
+- name: mediawiki | Make skins directory readable
+  file:
+    path: "{{ mediawiki_extensions_dir }}"
+    mode: "{{ mediawiki_file_mode }}"
+    recurse: yes
+  tags: skins

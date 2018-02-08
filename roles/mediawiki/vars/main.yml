@@ -1,30 +1,53 @@
 ---
 
-# Full version string (e.g. 1.28.1)
-mediawiki_version: "{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}.{{ mediawiki_version_path }}"
-# Full release string (e.g. REL1_28)
-mediawiki_release: "REL{{ mediawiki_version_major }}_{{ mediawiki_version_minor }}"
-# Tar and directory name (e.g. mediawiki-1.18.1)
-mediawiki_dir: "mediawiki-{{ mediawiki_version }}"
-
 # Directory of the current installation
 mediawiki_current_dir: "{{ mediawiki_base_dir }}/w"
 # Directory of the new installation
 mediawiki_new_dir: "{{ mediawiki_base_dir }}/{{ mediawiki_dir }}"
-# Extension directory of the new installation
-mediawiki_new_extensions_dir: "{{ mediawiki_new_dir }}/extensions"
-
-# Download url
-mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}/{{ mediawiki_dir }}.tar.gz"
-# Base url to clone extensions
-mediawiki_extensions_base_url: "https://gerrit.wikimedia.org/r/mediawiki/extensions"
 
 # File mode (chmod)
 mediawiki_file_mode: "0750"
 # Force git cloning?
-mediawiki_extensions_force: no
+mediawiki_git_force: no
+
+
+###############################################################################
+# Mediawiki version and URLs
+###############################################################################
+
+# Full version string (e.g. 1.28.1)
+mediawiki_version: "{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}.{{ mediawiki_version_path }}"
+# Full release string (e.g. REL1_28)
+mediawiki_release: "REL{{ mediawiki_version_major }}_{{ mediawiki_version_minor }}"
+# Tar and directory name (e.g. mediawiki-1.28.1)
+mediawiki_dir: "mediawiki-{{ mediawiki_version }}"
+
+# Download url
+mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}/{{ mediawiki_dir }}.tar.gz"
+# Base url to clone extensions
+mediawiki_repositories_base_url: "https://gerrit.wikimedia.org/r/mediawiki"
+
+
+###############################################################################
+# Mediawiki skin
+###############################################################################
+
+# Base url to clone extensions
+mediawiki_skins_base_url: "{{ mediawiki_repositories_base_url }}/skins"
+# Extension directory of the new installation
+mediawiki_skins_dir: "{{ mediawiki_new_dir }}/skins"
+
+
+###############################################################################
+# Mediawiki extensions
+###############################################################################
+
+# Base url to clone extensions
+mediawiki_extensions_base_url: "{{ mediawiki_repositories_base_url }}/extensions"
+# Extension directory of the new installation
+mediawiki_extensions_dir: "{{ mediawiki_new_dir }}/extensions"
 
 # SyntaxHighlight: Pygmentize file
-syntaxhighlight_pygmentize_file: "{{ mediawiki_new_extensions_dir }}/SyntaxHighlight_GeSHi/pygments/pygmentize"
+syntaxhighlight_pygmentize_file: "{{ mediawiki_extensions_dir }}/SyntaxHighlight_GeSHi/pygments/pygmentize"
 # SyntaxHighlight: Pygmentize file mode
 syntaxhighlight_pygmentize_mode: "0751"
