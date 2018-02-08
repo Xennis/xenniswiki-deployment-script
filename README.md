@@ -10,6 +10,6 @@ Configure the script
 * Enter the IP of the server in the `[xenniswiki]` section of the `/etc/ansible/hosts` file
 
 Run the playbook
-```bash
+```sh
 ansible-playbook xenniswiki.yml
 ```

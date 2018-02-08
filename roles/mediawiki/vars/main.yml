@@ -17,7 +17,7 @@ mediawiki_new_extensions_dir: "{{ mediawiki_new_dir }}/extensions"
 # Download url
 mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}/{{ mediawiki_dir }}.tar.gz"
 # Base url to clone extensions
-mediawiki_extensions_base_url: "https://gerrit.wikimedia.org/r/mediawiki/extensions/"
+mediawiki_extensions_base_url: "https://gerrit.wikimedia.org/r/mediawiki/extensions"
 
 # File mode (chmod)
 mediawiki_file_mode: "0750"

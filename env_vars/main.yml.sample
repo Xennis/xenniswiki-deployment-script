@@ -17,8 +17,8 @@ database_backup_file: "~/backup.sql.gz"
 ###############################################################################
 
 mediawiki_version_major: "1"
-mediawiki_version_minor: "28"
-mediawiki_version_path: "1"
+mediawiki_version_minor: "30"
+mediawiki_version_path: "0"
 
 mediawiki_base_dir: "~/public"
 
