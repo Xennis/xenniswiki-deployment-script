@@ -4,3 +4,8 @@
   copy:
     src: "{{ local_files_dir }}/robots.txt"
     dest: "{{ mediawiki_base_dir }}"
+
+- name: server | Copy static files
+  copy:
+    src: "{{ local_files_dir }}/static"
+    dest: "{{ mediawiki_base_dir }}"
