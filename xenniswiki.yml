@@ -5,5 +5,5 @@
   vars_files:
     - env_vars/main.yml
   roles:
-    - database
+    #- database
     - mediawiki
