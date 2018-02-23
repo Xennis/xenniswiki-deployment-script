@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /w/
+Disallow: /{{ mediawiki_dir }}/
 Disallow: /wiki/Special:Random
 Disallow: /wiki/Special:Search
 Disallow: /wiki/Talk:
@@ -8,6 +8,6 @@ Disallow: /wiki/MediaWiki:*
 
 User-agent: Googlebot
 User-agent: Googlebot-Mobile
-Disallow: /w/
+Disallow: /{{ mediawiki_dir }}/
 Disallow: /wiki/Special:*
-Allow: /w/load.php
+Allow: /{{ mediawiki_dir }}/load.php

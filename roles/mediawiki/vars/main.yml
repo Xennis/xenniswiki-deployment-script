@@ -1,9 +1,9 @@
 ---
 
 # Directory of the current installation
-mediawiki_current_dir: "{{ mediawiki_base_dir }}/w"
+mediawiki_current_dir: "{{ mediawiki_base_dir }}/{{ mediawiki_dir }}"
 # Directory of the new installation
-mediawiki_new_dir: "{{ mediawiki_base_dir }}/{{ mediawiki_dir }}"
+mediawiki_new_dir: "{{ mediawiki_base_dir }}/mw-{{ mediawiki_version }}"
 
 # File mode (chmod)
 mediawiki_file_mode: "0750"
@@ -19,11 +19,9 @@ mediawiki_git_force: no
 mediawiki_version: "{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}.{{ mediawiki_version_path }}"
 # Full release string (e.g. REL1_28)
 mediawiki_release: "REL{{ mediawiki_version_major }}_{{ mediawiki_version_minor }}"
-# Tar and directory name (e.g. mediawiki-1.28.1)
-mediawiki_dir: "mediawiki-{{ mediawiki_version }}"
 
 # Download url
-mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}/{{ mediawiki_dir }}.tar.gz"
+mediawiki_url: "https://releases.wikimedia.org/mediawiki/{{ mediawiki_version_major }}.{{ mediawiki_version_minor }}/mediawiki-{{ mediawiki_version }}.tar.gz"
 # Base url to clone extensions
 mediawiki_repositories_base_url: "https://gerrit.wikimedia.org/r/mediawiki"
 
