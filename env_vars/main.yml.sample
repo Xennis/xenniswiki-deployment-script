@@ -20,6 +20,7 @@ mediawiki_version_major: "1"
 mediawiki_version_minor: "30"
 mediawiki_version_path: "0"
 
+mediawiki_sitename: "MyWiki"
 mediawiki_base_dir: "~/public"
 
 mediawiki_copy_files:
