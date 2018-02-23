@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /w/
+Disallow: /wiki/Special:Random
+Disallow: /wiki/Special:Search
+Disallow: /wiki/Talk:
+Disallow: /wiki/XennisWiki:*
+Disallow: /wiki/MediaWiki:*
+
+User-agent: Googlebot
+User-agent: Googlebot-Mobile
+Disallow: /w/
+Disallow: /wiki/Special:*
+Allow: /w/load.php

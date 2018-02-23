@@ -1,0 +1,6 @@
+---
+
+- name: server | Copy robots.txt file
+  copy:
+    src: "{{ local_files_dir }}/robots.txt"
+    dest: "{{ mediawiki_base_dir }}"
