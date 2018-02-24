@@ -1,13 +1,13 @@
 User-agent: *
 Disallow: /{{ mediawiki_dir }}/
-Disallow: /wiki/Special:Random
-Disallow: /wiki/Special:Search
-Disallow: /wiki/Talk:
-Disallow: /wiki/{{ mediawiki_sitename }}:*
-Disallow: /wiki/MediaWiki:*
+Disallow: /{{ server_url_prefix }}/Special:Random
+Disallow: /{{ server_url_prefix }}/Special:Search
+Disallow: /{{ server_url_prefix }}/Talk:
+Disallow: /{{ server_url_prefix }}/{{ mediawiki_sitename }}:*
+Disallow: /{{ server_url_prefix }}/MediaWiki:*
 
 User-agent: Googlebot
 User-agent: Googlebot-Mobile
 Disallow: /{{ mediawiki_dir }}/
-Disallow: /wiki/Special:*
+Disallow: /{{ server_url_prefix }}/Special:*
 Allow: /{{ mediawiki_dir }}/load.php

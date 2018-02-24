@@ -3,7 +3,7 @@
 ###############################################################################
 
 # Short url for wiki pages
-RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
+RewriteRule ^/?{{ server_url_prefix }}(/.*)?$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
 # Redirect / to Main Page
 RewriteRule ^/*$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
 

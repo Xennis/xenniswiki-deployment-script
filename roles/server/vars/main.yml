@@ -4,3 +4,6 @@ local_files_dir: "files"
 
 # File mode (chmod)
 server_file_mode: "0640"
+
+# URL prefix /wiki
+server_url_prefix: "wiki"
