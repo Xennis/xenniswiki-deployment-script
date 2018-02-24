@@ -1,0 +1,15 @@
+###############################################################################
+# URLs (http://www.mediawiki.org/wiki/Manual:Short_URL/Apache)
+###############################################################################
+
+# Short url for wiki pages
+RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
+# Redirect / to Main Page
+RewriteRule ^/*$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
+
+###############################################################################
+# Other
+###############################################################################
+
+# Prevent .git access
+RedirectMatch 404 /\.git

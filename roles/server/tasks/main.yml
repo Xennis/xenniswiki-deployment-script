@@ -1,11 +1,12 @@
 ---
 
-- name: server | Copy robots.txt file
+- name: server | Copy files
   template:
     src: "{{ local_files_dir }}/{{ item }}.j2"
     dest: "{{ mediawiki_base_dir }}/{{ item }}"
     mode: "{{ server_file_mode }}"
   with_items:
+    - .htaccess
     - robots.txt
 
 - name: server | Copy static files
