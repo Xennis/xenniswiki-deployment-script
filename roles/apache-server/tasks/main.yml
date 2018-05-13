@@ -1,0 +1,9 @@
+---
+
+- name: apache-server | Copy files
+  template:
+    src: "files/{{ item }}.j2"
+    dest: "{{ mediawiki_base_dir }}/{{ item }}"
+    mode: 0640
+  with_items:
+    - .htaccess

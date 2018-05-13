@@ -1,0 +1,15 @@
+---
+
+- name: xenniswiki | Copy files
+  template:
+    src: "files/{{ item }}.j2"
+    dest: "{{ mediawiki_base_dir }}/{{ item }}"
+    mode: 0640
+  with_items:
+    - robots.txt
+
+- name: xenniswiki | Copy static files
+  copy:
+    src: "files/static"
+    dest: "{{ mediawiki_base_dir }}"
+    mode: 0640

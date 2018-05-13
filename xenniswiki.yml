@@ -3,8 +3,9 @@
 - name: xenniswiki update
   hosts: xenniswiki
   vars_files:
-    - env_vars/main.yml
+    - env_vars/xenniswiki.yml
   roles:
-    - server
+    - apache-server
     #- database
     - mediawiki
+    - xenniswiki

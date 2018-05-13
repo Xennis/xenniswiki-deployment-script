@@ -25,6 +25,8 @@ mediawiki_sitename: "MyWiki"
 mediawiki_base_dir: "~/public"
 # Diretory inside mediawiki_base_dir in which the wiki is installed
 mediawiki_dir: "w"
+# URL prefix /wiki
+mediawiki_url_prefix: "wiki"
 
 mediawiki_copy_files:
   - "LocalSettings.php"
