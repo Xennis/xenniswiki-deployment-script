@@ -15,4 +15,5 @@
     path: "{{ mediawiki_extensions_dir }}"
     mode: "{{ mediawiki_file_mode }}"
     recurse: yes
+  when: mediawiki_skins_wikimedia is defined
   tags: skins
