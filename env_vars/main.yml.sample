@@ -20,7 +20,6 @@ mediawiki_version_major: "1"
 mediawiki_version_minor: "30"
 mediawiki_version_path: "0"
 
-mediawiki_sitename: "MyWiki"
 # Webspace path to which the domain refers to
 mediawiki_base_dir: "~/public"
 # Diretory inside mediawiki_base_dir in which the wiki is installed
