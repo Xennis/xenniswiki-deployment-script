@@ -7,9 +7,22 @@ RewriteRule ^/?{{ mediawiki_url_prefix }}(/.*)?$ %{DOCUMENT_ROOT}/{{ mediawiki_d
 # Redirect / to Main Page
 RewriteRule ^/*$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
 
+
 ###############################################################################
 # Other
 ###############################################################################
 
 # Prevent .git access
 RedirectMatch 404 /\.git
+{% if apache_redirect_http_to_https is defined and apache_redirect_http_to_https %}
+
+
+###############################################################################
+# Redirect HTTP to HTTPS
+###############################################################################
+
+# Check connection is not already HTTPS
+RewriteCond %{HTTPS} !=on
+# Redirect to HTTPS
+RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+{% endif %}
