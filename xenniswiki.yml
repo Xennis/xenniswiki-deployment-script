@@ -6,6 +6,5 @@
     - env_vars/xenniswiki.yml
   roles:
     - apache-server
-    #- database
     - mediawiki
     - xenniswiki

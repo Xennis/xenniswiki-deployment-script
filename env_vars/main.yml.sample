@@ -8,18 +8,6 @@
 
 
 ###############################################################################
-# Database settings
-###############################################################################
-
-database_host: "database-host"
-database_name: "database-name"
-database_user: "database-user"
-database_password: "database-password"
-
-database_backup_file: "~/backup.sql.gz"
-
-
-###############################################################################
 # Mediawiki basic settings
 ###############################################################################
 
