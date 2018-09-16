@@ -4,7 +4,7 @@
 # Apache server settings
 ###############################################################################
 
-#apache_redirect_http_to_https: True
+apache_redirect_http_to_https: True
 
 
 ###############################################################################
@@ -12,11 +12,11 @@
 ###############################################################################
 
 mediawiki_version_major: "1"
-mediawiki_version_minor: "30"
+mediawiki_version_minor: "31"
 mediawiki_version_path: "0"
 
 # Webspace path to which the domain refers to
-mediawiki_base_dir: "~/public"
+mediawiki_base_dir: "~/webseiten/xennis_wiki/public"
 # Diretory inside mediawiki_base_dir in which the wiki is installed
 mediawiki_dir: "w"
 # URL prefix /wiki
@@ -31,7 +31,7 @@ mediawiki_copy_files:
 # Mediawiki skins
 ###############################################################################
 
-mediawiki_skins_wikipedia:
+mediawiki_skins_wikimedia:
   - "MinervaNeue"
 
 
@@ -40,8 +40,9 @@ mediawiki_skins_wikipedia:
 ###############################################################################
 
 mediawiki_extensions_wikimedia:
-  - "CategoryTree"
   - "Math"
+  - "MobileFrontend"
+  - "UploadWizard"
 
 mediawiki_extensions_other:
   - { name: "PDFEmbed", repo: "https://github.com/HydraWiki/PDFEmbed" }

@@ -1,5 +1,2 @@
-# Local configuration files
-/env_vars/*.yml
-
 # Local Vagrant files
 *.retry
