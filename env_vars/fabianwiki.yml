@@ -1,0 +1,28 @@
+---
+
+###############################################################################
+# Mediawiki basic settings
+###############################################################################
+
+mediawiki_version_major: "1"
+mediawiki_version_minor: "31"
+mediawiki_version_path: "0"
+
+# Webspace path to which the domain refers to
+mediawiki_base_dir: "~/webseiten/fabian_wiki/public"
+# Diretory inside mediawiki_base_dir in which the wiki is installed
+mediawiki_dir: "w"
+# URL prefix /wiki
+mediawiki_url_prefix: "wiki"
+
+mediawiki_copy_files:
+  - "LocalSettings.php"
+  - "images"
+
+
+###############################################################################
+# Mediawiki extensions
+###############################################################################
+
+mediawiki_extensions_wikimedia:
+  - "MobileFrontend"

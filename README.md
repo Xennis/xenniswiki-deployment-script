@@ -10,5 +10,5 @@ Configure the script
 
 Run the playbook
 ```sh
-ansible-playbook xenniswiki.yml
+ansible-playbook <playbook file>
 ```
