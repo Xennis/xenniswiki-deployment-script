@@ -2,6 +2,7 @@
 # URLs (http://www.mediawiki.org/wiki/Manual:Short_URL/Apache)
 ###############################################################################
 
+RewriteEngine on
 # Short url for wiki pages
 RewriteRule ^/?{{ mediawiki_url_prefix }}(/.*)?$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
 # Redirect / to Main Page
