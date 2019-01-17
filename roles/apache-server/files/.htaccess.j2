@@ -2,11 +2,13 @@
 # URLs (http://www.mediawiki.org/wiki/Manual:Short_URL/Apache)
 ###############################################################################
 
+<IfModule mod_rewrite.c>
 RewriteEngine on
 # Short url for wiki pages
 RewriteRule ^/?{{ mediawiki_url_prefix }}(/.*)?$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
 # Redirect / to Main Page
 RewriteRule ^/*$ %{DOCUMENT_ROOT}/{{ mediawiki_dir }}/index.php [L]
+</IfModule>
 
 
 ###############################################################################
@@ -24,7 +26,9 @@ Options -Indexes
 # Redirect HTTP to HTTPS
 ###############################################################################
 
+<IfModule mod_rewrite.c>
 # Check connection is not already HTTPS
 RewriteCond %{HTTPS} !=on
 # Redirect to HTTPS
 RewriteRule ^/?(.*) https://%{SERVER_NAME}/$1 [R,L]
+</IfModule>
