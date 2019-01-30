@@ -21,6 +21,11 @@ RedirectMatch 404 /\.git
 # Turn off directory listing
 Options -Indexes
 
+<IfModule mod_negotiation.c>
+# Turn off implicit filename pattern match
+Options -MultiViews
+</IfModule>
+
 
 ###############################################################################
 # Redirect HTTP to HTTPS
