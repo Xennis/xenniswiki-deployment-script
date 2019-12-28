@@ -1,9 +1,0 @@
----
-
-- name: fabianwiki update
-  hosts: fabianwiki
-  vars_files:
-    - env_vars/fabianwiki.yml
-  roles:
-    - apache-server
-    - mediawiki
