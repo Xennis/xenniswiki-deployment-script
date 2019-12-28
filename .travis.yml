@@ -6,5 +6,4 @@ install:
 before_script:
   - ansible-playbook --version
 script:
-  - ansible-playbook --syntax-check fabianwiki.yml
   - ansible-playbook --syntax-check xenniswiki.yml
