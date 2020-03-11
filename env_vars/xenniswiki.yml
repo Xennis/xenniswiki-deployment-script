@@ -6,7 +6,7 @@
 
 mediawiki_version_major: "1"
 mediawiki_version_minor: "31"
-mediawiki_version_path: "1"
+mediawiki_version_path: "6"
 
 # Webspace path to which the domain refers to
 mediawiki_base_dir: "~/webseiten/xennis_wiki/public"
