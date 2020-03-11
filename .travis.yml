@@ -7,3 +7,5 @@ before_script:
   - ansible-playbook --version
 script:
   - ansible-playbook --syntax-check xenniswiki.yml
+branches:
+  only: [master]
