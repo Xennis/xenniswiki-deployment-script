@@ -5,11 +5,11 @@
 ###############################################################################
 
 mediawiki_version_major: "1"
-mediawiki_version_minor: "31"
-mediawiki_version_path: "6"
+mediawiki_version_minor: "35"
+mediawiki_version_path: "7"
 
 # Webspace path to which the domain refers to
-mediawiki_base_dir: "~/web"
+mediawiki_base_dir: "/home/sites/site100012596/users/site-xennis-wiki/web"
 # Diretory inside mediawiki_base_dir in which the wiki is installed
 mediawiki_dir: "w"
 # URL prefix /wiki

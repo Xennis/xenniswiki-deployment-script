@@ -1,12 +1,17 @@
 ## XennisWiki Deployment Script
 
-[![Build Status](https://travis-ci.org/Xennis/xenniswiki-deployment-script.svg?branch=master)](https://travis-ci.org/Xennis/xenniswiki-deployment-script)
-
 Ansible playbook to deploy the XennisWiki.
 
 ### Deployment
 
+Prerequisite the host is set, e.g. `/etc/ansible/hosts` con
+
+```
+[xenniswiki]
+example.org
+```
+
 Run the playbook
-```sh
+```shell
 ansible-playbook xenniswiki.yml
 ```
