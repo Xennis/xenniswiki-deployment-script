@@ -1,4 +1,4 @@
-name: Python
+name: Check
 on: push
 jobs:
   check:
