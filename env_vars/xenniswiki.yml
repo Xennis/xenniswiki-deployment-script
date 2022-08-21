@@ -38,4 +38,4 @@ mediawiki_extensions_wikimedia:
   - "UploadWizard"
 
 mediawiki_extensions_other:
-  - { name: "PDFEmbed", repo: "https://github.com/HydraWiki/PDFEmbed" }
+  - { name: "PDFEmbed", repo: "https://github.com/WolfgangFahl/PDFEmbed" }
