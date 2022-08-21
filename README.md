@@ -1,5 +1,7 @@
 ## XennisWiki Deployment Script
 
+[![Build Status](https://github.com/Xennis/xenniswiki-deployment-script/actions/workflows/check.yml/badge.svg)](https://github.com/Xennis/xenniswiki-deployment-script/actions/workflows/check.yml)
+
 Ansible playbook to deploy the XennisWiki.
 
 ### Deployment
