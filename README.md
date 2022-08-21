@@ -6,7 +6,7 @@ Ansible playbook to deploy the XennisWiki.
 
 ### Deployment
 
-Prerequisite the host is set, e.g. `/etc/ansible/hosts` con
+Prerequisite: The host is set, e.g. `/etc/ansible/hosts`
 
 ```
 [xenniswiki]
