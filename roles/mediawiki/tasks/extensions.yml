@@ -10,15 +10,6 @@
   when: mediawiki_extensions_wikimedia is defined
   tags: extensions
 
-- name: mediawiki | Install other extensions
-  git:
-    repo: "{{ item.repo }}"
-    dest: "{{ mediawiki_extensions_dir }}/{{ item.name }}"
-    force: "{{ mediawiki_git_force }}"
-  with_items: "{{ mediawiki_extensions_other }}"
-  when: mediawiki_extensions_other is defined
-  tags: extensions
-
 - name: mediawiki | Make extensions directory readable
   file:
     path: "{{ mediawiki_extensions_dir }}"
