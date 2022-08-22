@@ -9,7 +9,7 @@ mediawiki_version_minor: "35"
 mediawiki_version_path: "7"
 
 # Webspace path to which the domain refers to
-mediawiki_base_dir: "/home/sites/site100012596/users/site-xennis-wiki/web"
+mediawiki_base_dir: "/home/sites/site100012596/web/xenniswiki"
 # Diretory inside mediawiki_base_dir in which the wiki is installed
 mediawiki_dir: "w"
 # URL prefix /wiki
@@ -33,9 +33,5 @@ mediawiki_skins_wikimedia:
 ###############################################################################
 
 mediawiki_extensions_wikimedia:
-  - "Math"
   - "MobileFrontend"
   - "UploadWizard"
-
-mediawiki_extensions_other:
-  - { name: "PDFEmbed", repo: "https://github.com/WolfgangFahl/PDFEmbed" }
